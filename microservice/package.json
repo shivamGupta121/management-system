@@ -1,0 +1,35 @@
+{
+  "name": "your-microservices-app",
+  "version": "1.0.0",
+  "description": "A Node.js microservices application",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon server.js",
+    "test": "mocha ../microservice/user/tests/userController.test.js  ../microservice/task/tests/taskController.test.js",
+    "test:unit": "jest --verbose --runInBand --testPathPattern=tests/unit",
+    "test:integration": "jest --verbose --runInBand --testPathPattern=tests/integration",
+    "test:all": "npm run test && npm run test:integration"
+  },
+  "keywords": [
+    "node",
+    "express",
+    "mongodb",
+    "microservices"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "chai-http": "^4.4.0",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^6.0.10"
+  },
+  "devDependencies": {
+    "chai": "^4.3.10",
+    "jest": "^27.5.1",
+    "mocha": "^10.2.0",
+    "nodemon": "^3.0.2",
+    "supertest": "^6.3.3"
+  }
+}
