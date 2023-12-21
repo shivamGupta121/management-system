@@ -7,7 +7,7 @@ const addUser = async (req, res) => {
 
     if (adminUsers.length === 0) {
         return res.status(403).json({ message: 'Permission denied. No admin users found.' });
-    }
+    };
 
     // Check if the user making the request is an admin
     const isAdminUser = adminUsers.some((user) => user.type === 'admin23');

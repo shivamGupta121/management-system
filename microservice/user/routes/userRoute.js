@@ -9,3 +9,4 @@ router.delete('/:id', userController.deleteUser);
 // Routes accessible to both default and admin users
 router.get('/:id', userController.getUserInfo);
 module.exports = router;
+

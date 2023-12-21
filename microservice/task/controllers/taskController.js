@@ -24,6 +24,7 @@ const getAllTasks = async (req, res) => {
   }
 };
 
+
 const createTask = async (req, res) => {
   const { title, description, priority, dueDate, userId } = req.body;
   const adminUsers = await User.findByType('admin');
